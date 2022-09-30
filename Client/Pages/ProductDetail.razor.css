@@ -1,0 +1,11 @@
+.carousel-indicators> img{
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    border-radius: 15%;
+    
+}
+
+.carousel-caption{
+    padding-bottom: 0;
+}

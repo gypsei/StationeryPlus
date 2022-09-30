@@ -1,0 +1,139 @@
+@page "/product"
+
+@* Sticky Header Product Page *@
+
+@* need to make it sticky header while scrolling *@
+<div class="category">
+    <div class="row">
+        <div class="col">
+            <ol class="list-inline">
+                <li class="list-inline-item">
+                    <a>Category</a>
+                </li>
+                <li class="list-inline-item">
+                    <figure class="oi oi-chevron-right"></figure>
+                    <a>Sub-Categorty</a>
+                </li>
+                <li class="list-inline-item">
+                    <figure class="oi oi-chevron-right"></figure>
+                    <a>Other-Categorty</a>
+                </li>
+                <li class="list-inline-item">
+                    <figure class="oi oi-chevron-right"></figure>
+                    <a>Product Title</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+@* need to make it sticky header while scrolling *@
+@* Sticky Header Product Page *@
+
+
+@* Introduction Title *@
+<div class="content-top d-flex justify-content-center text-center my-5">
+    <div class="intro">
+        <div class="intro-content">
+            <h1 class="intro-title fw-bold" id="product-title">
+                Nataraj Pencils -HB
+            </h1>
+            <figure class="intro-reviews d-inline">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>    
+            </figure>
+            @* if no reviwes then "Write a review" *@
+            <label class="reviews"> <a href="#"> 5 reviews</a></label>
+        </div>
+    </div>
+
+</div>
+@* Introduction Title *@
+
+
+@* Caurosel For Dress *@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="lol2.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption text-dark d-none d-md-block position-static pb-0">
+          <h5 class="fw-bold">$0.05</h5>
+          <p class="fw-bold">Nataraj 621 - HB</p>
+      </div>
+      
+    </div>
+    <div class="carousel-item">
+        <img src="lol2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-dark d-none d-md-block position-static pb-0">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+        </div>
+        
+    </div>
+    <div class="carousel-item">
+        <img src="lol2.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption text-dark d-none d-md-block position-static pb-0">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+        </div>
+        
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    <div class="carousel-indicators position-static">
+        <img src="icon-192.png" type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active test-height" aria-current="true" aria-label="Slide 1">
+        <img src="icon-192.png" type="button" data-bs-target="#carouselExampleControls" class="test-height" data-bs-slide-to="1" aria-label="Slide 2">
+        <img src="icon-192.png"  type="button" data-bs-target="#carouselExampleControls" class="test-height" data-bs-slide-to="2" aria-label="Slide 3">
+    </div>
+    
+</div>
+@* Caurosel For Dress *@
+
+
+@* Sizes *@
+<div id="product-sizes" class="text-center">
+<input type="radio" class="btn-check" name="options-outlined" id="size-small" autocomplete="off" checked>
+<label class="btn btn-outline-dark" for="size-small">S</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="medium-size" autocomplete="off">
+<label class="btn btn-outline-dark" for="medium-size">M</label>
+<input type="radio" class="btn-check" name="options-outlined" id="large-size" autocomplete="off">
+<label class="btn btn-outline-dark" for="large-size">L</label>
+
+<input type="radio" class="btn-check" name="options-outlined" id="extralarge-size" autocomplete="off">
+<label class="btn btn-outline-dark" for="extralarge-size">XL</label>
+</div>
+@* Sizes *@
+
+
+@* Add to cart button *@
+<div class="d-grid gap-2 col-3 mx-auto my-2">
+      <button class="btn btn-outline-dark rounded-pill" type="button" disabled>On Stock</button>
+    <button class="btn btn-dark rounded-pill" type="button">Add to Cart</button>
+</div>
+@* Add to cart button *@
+
+
+@* Overview *@
+<dl class="row my-5">
+  <dt class="col-sm-3">Overview:</dt>
+    <dd class="col-sm-9"> The 621 is the flagship pencil for the Nataraj brand and one of their oldest pencils. Depending on the market you're in (or obtaining your pencils from), the imprint and color availability can be different, but the name Nataraj 621 is the one constant. According to the Hindustan website, the 621 is available in multiple colors for the international market, including green, blue, silver, and white, in addition to the standard red that's available in the Indian market. The red is called "Ruby", and sometimes I've seen this pencil reviewed as the Nataraj Ruby 621. </dd>
+    
+    <dt class="col-sm-3 my-3">People Also Search For:</dt>
+    <dd class="col-sm-9"></dd>
+    </dl>
+@* Overview *@
+
+@code {
+    
+}
