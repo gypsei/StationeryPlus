@@ -197,14 +197,14 @@
       "netstandard.dll": "sha256-HhuK9zDkd1N7hODAEiNJ11VF8T54IgrM6hZfLHmHdqM=",
       "System.Private.CoreLib.dll": "sha256-dXaTqyg1PnXPiSwywpic1PVrd7P8Vb5tN0i0\/urdt3E=",
       "StationeryPlus.Shared.dll": "sha256-oD7uIPm5VUBbYfG9Gxw4IH1uAn3RFSA1Sp8MnVVq14M=",
-      "StationeryPlus.Client.dll": "sha256-6ebRPparDckCQN7rslf\/cF0ccwH4ubRJTOGN\/iAY+5I="
+      "StationeryPlus.Client.dll": "sha256-8HRL3FjcDOlkCGX9ntOfEPNdSNz3hMLrOnKUdqxk96Q="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "StationeryPlus.Shared.pdb": "sha256-hjFc1H5ZEtIK3bO3kr\/gBk8Iy44S1sBG0uT26j+rYw0=",
-      "StationeryPlus.Client.pdb": "sha256-mkufGJzEzlPFYcmM34DcRnKT+uU7uYNc5wRUoB1OZnk="
+      "StationeryPlus.Client.pdb": "sha256-8kIv0IE3qtTnPV3Lx2avTAaDdLc0UcdcUWzniloey5g="
     },
     "runtime": {
       "dotnet.6.0.8.204fqqb8xv.js": "sha256-WT60vnXnQtCNURE40qo+XSL1o4iYFvABy0NVaFhm7MI=",
