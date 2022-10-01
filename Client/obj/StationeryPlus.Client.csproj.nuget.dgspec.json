@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj": {}
+    "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj": {
+    "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj",
+        "projectUniqueName": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj",
         "projectName": "StationeryPlus.Client",
-        "projectPath": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj",
-        "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Client\\obj\\",
+        "projectPath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj",
+        "packagesPath": "C:\\Users\\class\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\class\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj": {
-                "projectPath": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj"
+              "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj": {
+                "projectPath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj"
               }
             }
           }
@@ -66,7 +66,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.9, 6.0.9]"
+              "version": "[6.0.8, 6.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\class\\.dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -83,17 +83,17 @@
         }
       }
     },
-    "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj": {
+    "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj",
         "projectName": "StationeryPlus.Shared",
-        "projectPath": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj",
-        "packagesPath": "C:\\Users\\This PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\This PC\\RiderProjects\\StationeryPlus\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\StationeryPlus.Shared.csproj",
+        "packagesPath": "C:\\Users\\class\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\This PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\class\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -132,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\class\\.dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
