@@ -101,3 +101,230 @@ main[b-gn02g3no8k] {
         padding-right: 1.5rem !important;
     }
 }
+/* /Shared/ProductCard.razor.rz.scp.css */
+body[b-bvdeok7rdf]{
+
+    background-color: #eee;
+}
+
+.card[b-bvdeok7rdf]{
+
+    background-color: #fff;
+    border:none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.image-container[b-bvdeok7rdf]{
+
+    position: relative;
+}
+
+.thumbnail-image[b-bvdeok7rdf]{
+    border-radius: 10px !important;
+}
+
+
+.discount[b-bvdeok7rdf]{
+
+    background-color: red;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 10px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.wishlist[b-bvdeok7rdf]{
+
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.first[b-bvdeok7rdf]{
+
+    position: absolute;
+    width: 100%;
+    padding: 9px;
+}
+
+
+.dress-name[b-bvdeok7rdf]{
+    font-size: 13px;
+    font-weight: bold;
+    width: 75%;
+}
+
+
+.new-price[b-bvdeok7rdf]{
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+
+}
+.old-price[b-bvdeok7rdf]{
+    font-size: 8px;
+    font-weight: bold;
+    color: grey;
+}
+
+
+.btn[b-bvdeok7rdf]{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.creme[b-bvdeok7rdf]{
+    background-color: #fff;
+    border: 2px solid grey;
+
+
+}
+.creme:hover[b-bvdeok7rdf] {
+    border: 3px solid grey;
+}
+
+.creme:focus[b-bvdeok7rdf] {
+    background-color: grey;
+
+}
+
+
+.red[b-bvdeok7rdf]{
+    background-color: #fff;
+    border: 2px solid red;
+
+}
+
+
+.red:hover[b-bvdeok7rdf] {
+    border: 3px solid red;
+}
+.red:focus[b-bvdeok7rdf] {
+    background-color: red;
+}
+
+
+
+.blue[b-bvdeok7rdf]{
+    background-color: #fff;
+    border: 2px solid #40C4FF;
+}
+
+.blue:hover[b-bvdeok7rdf] {
+    border: 3px solid #40C4FF;
+}
+.blue:focus[b-bvdeok7rdf] {
+    background-color: #40C4FF;
+}
+.darkblue[b-bvdeok7rdf]{
+    background-color: #fff;
+    border: 2px solid #01579B;
+}
+.darkblue:hover[b-bvdeok7rdf] {
+    border: 3px solid #01579B;
+}
+.darkblue:focus[b-bvdeok7rdf] {
+    background-color: #01579B;
+}
+.yellow[b-bvdeok7rdf]{
+    background-color: #fff;
+    border: 2px solid #FFCA28;
+}
+.yellow:hover[b-bvdeok7rdf] {
+    border-radius: 3px;
+    border: solid #FFCA28;
+}
+.yellow:focus[b-bvdeok7rdf] {
+    background-color: #FFCA28;
+}
+
+
+.item-size[b-bvdeok7rdf]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid grey;
+    color: grey;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.item-size:hover[b-bvdeok7rdf]{
+    background:grey;
+    color: white;
+}
+
+.rating-star[b-bvdeok7rdf]{
+    font-size: 10px !important;
+}
+.rating-number[b-bvdeok7rdf]{
+    font-size: 10px;
+    color: grey;
+
+}
+.buy[b-bvdeok7rdf]{
+    font-size: 12px;
+    color: purple;
+    font-weight: 500;
+}
+
+.voutchers[b-bvdeok7rdf]{
+    background-color: #fff;
+    border:none;
+    border-radius: 10px;
+    width: 190px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+
+}
+.voutcher-divider[b-bvdeok7rdf]{
+
+    display: flex;
+
+}
+.voutcher-left[b-bvdeok7rdf]{
+    width: 60%
+}
+.voutcher-name[b-bvdeok7rdf]{
+    color: grey;
+    font-size: 9px;
+    font-weight: 500;
+}
+.voutcher-code[b-bvdeok7rdf]{
+    color: red;
+    font-size: 11px;
+    font-weight: bold;
+}
+.voutcher-right[b-bvdeok7rdf]{
+    width: 40%;
+    background-color: purple;
+    color: #fff;
+}
+
+.discount-percent[b-bvdeok7rdf]{
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: 5px;
+}
+.off[b-bvdeok7rdf]{
+    font-size: 14px;
+    position: relative;
+    bottom: 5px;
+}
