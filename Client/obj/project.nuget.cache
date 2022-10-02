@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zSN6D1a8YRt2VgZGJB1PDt/ipY2J2kK/pg5wuhTi2bk/38zW5BOa8WasMLzXETh8RZ4VPu7WULvl3r3yK6RBhg==",
+  "dgSpecHash": "KcPO+yR1YtkVft+9yerUhzY3ggOLktgY+8pqoiKBiiIF7OpYWfOeHhFKaIKJNktluwc0dlOO8xwNLqL9pDCwsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\StationeryPlus.Client.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,7 @@
     "C:\\Users\\class\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\class\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\class\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.8\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.8.nupkg.sha512"
+    "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.9.nupkg.sha512"
   ],
   "logs": []
 }
