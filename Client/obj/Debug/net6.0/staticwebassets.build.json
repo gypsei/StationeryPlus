@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JOayDPW0SVJksKd0PI2tazCO3C3QJ2Pse5xoPv/J6+E=",
+  "Hash": "RMh2jyHbIoTMKt92mTcff1LIhhQqlSxuZ8iZgdhd09g=",
   "Source": "StationeryPlus.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\runtimes\\browser-wasm\\native\\dotnet.wasm"
     },
     {
+      "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
+      "SourceId": "StationeryPlus.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt.dat",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "native",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\runtimes\\browser-wasm\\native\\icudt.dat"
+    },
+    {
       "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat",
       "SourceId": "StationeryPlus.Client",
       "SourceType": "Computed",
@@ -151,23 +168,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
-    },
-    {
-      "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt.dat",
-      "SourceId": "StationeryPlus.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt.dat",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "BlazorWebAssemblyResource",
-      "AssetTraitValue": "native",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\class\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.9\\runtimes\\browser-wasm\\native\\icudt.dat"
     },
     {
       "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
@@ -6953,23 +6953,6 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "StationeryPlus.Client",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
-    },
-    {
       "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "StationeryPlus.Client",
       "SourceType": "Discovered",
@@ -7070,6 +7053,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "StationeryPlus.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "C:\\Users\\class\\RiderProjects\\StationeryPlus\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

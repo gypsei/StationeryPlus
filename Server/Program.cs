@@ -1,5 +1,8 @@
 global using StationeryPlus.Shared;
+global using StationeryPlus.Server.Services.ProductService;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using StationeryPlus.Server.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,8 +11,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-var app = builder.Build();
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
+//Swagger
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddScoped<IProductService, ProductService>();
+
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -22,6 +36,8 @@ else
     app.UseHsts();
 }
 
+app.UseSwaggerUI();
+app.UseSwagger();
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();

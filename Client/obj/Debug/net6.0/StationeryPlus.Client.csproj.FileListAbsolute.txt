@@ -1649,3 +1649,4 @@ C:\Users\class\RiderProjects\StationeryPlus\Client\obj\Debug\net6.0\build-gz\RL3
 C:\Users\class\RiderProjects\StationeryPlus\Client\obj\Debug\net6.0\build-gz\2LxB0qb8.gz
 C:\Users\class\RiderProjects\StationeryPlus\Client\obj\Debug\net6.0\build-gz\2hZBncRj.gz
 C:\Users\class\RiderProjects\StationeryPlus\Client\obj\Debug\net6.0\scopedcss\Shared\ProductCard.razor.rz.scp.css
+C:\Users\class\RiderProjects\StationeryPlus\Client\obj\Debug\net6.0\scopedcss\Shared\ProductItemTwo.razor.rz.scp.css

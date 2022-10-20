@@ -1,5 +1,21 @@
-<h3>CategoryPage</h3>
+@page "/category"
+<PunnyHeadline CategoryTitle="School Supplies" CategorySubtitle="lol lol lol" />
 
+
+<main>
+    <div class="album bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3">
+                    <ProductItemTwo />
+            </div>
+        </div>
+    </div>
+</main>
 @code {
     
+    [Parameter]
+    public string? CategoryTitle { get; set; }
+    
+    [Parameter]
+    public string? CategorySubtitle { get; set; }
 }

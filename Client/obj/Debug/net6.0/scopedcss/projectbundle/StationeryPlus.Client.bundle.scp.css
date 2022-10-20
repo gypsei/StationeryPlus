@@ -428,3 +428,79 @@ body[b-bvdeok7rdf]{
     position: relative;
     bottom: 5px;
 }
+/* /Shared/ProductItemTwo.razor.rz.scp.css */
+/* Product Card */
+.product-card[b-bhjh89929l] {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+}
+
+    .product-card a[b-bhjh89929l] {
+        text-decoration: none;
+    }
+
+    .product-card .stock[b-bhjh89929l] {
+        position: absolute;
+        color: #fff;
+        border-radius: 4px;
+        padding: 2px 12px;
+        margin: 8px;
+        font-size: 12px;
+    }
+
+    .product-card .product-card-img[b-bhjh89929l] {
+        max-height: 260px;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .product-card .product-card-img img[b-bhjh89929l] {
+            width: 100%;
+        }
+
+    .product-card .product-card-body[b-bhjh89929l] {
+        padding: 10px 10px;
+    }
+
+        .product-card .product-card-body .product-brand[b-bhjh89929l] {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 4px;
+            color: #937979;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .product-card .product-card-body .product-name[b-bhjh89929l] {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .product-card .product-card-body .selling-price[b-bhjh89929l] {
+            font-size: 22px;
+            color: #000;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .product-card .product-card-body .original-price[b-bhjh89929l] {
+            font-size: 18px;
+            color: #937979;
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+
+        .product-card .product-card-body .btn1[b-bhjh89929l] {
+            border: 1px solid;
+            margin-right: 3px;
+            border-radius: 0px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+/* Product Card End */
