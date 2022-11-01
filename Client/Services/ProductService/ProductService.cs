@@ -12,6 +12,13 @@ namespace StationeryPlus.Client.Services.ProductService
 
         }
         public List<Product> Products { get; set; } = new List<Product>();
+        public async Task<ServiceResponse<Product>> GetProduct(int productId)
+        {
+            //var result = new ServiceResponse<Product>();
+            var result = await _http.GetFromJsonAsync<ServiceResponse<Product>>($"api/product/{productId}");
+                return result;
+
+        }
 
         public async Task GetProducts()
         {

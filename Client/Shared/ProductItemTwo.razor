@@ -1,13 +1,14 @@
 ﻿@inject IProductService ProductService
 
-@if (ProductService.Products != null && ProductService.Products.Count == 0){
+@if (ProductService.Products == null && ProductService.Products.Count == 0){
     <span>Loading Products....</span>
 }
 
 else{
 
     @foreach (var Product in ProductService.Products){
-        <div class="d-flex col-md-3 align-items-stretch">
+        
+     <div class="d-flex col-md-3 align-items-stretch">
     <div class="product-card card">
         <div class="product-card-img">
             <label class="stock bg-success">In Stock</label>
@@ -16,7 +17,7 @@ else{
         <div class="product-card-body card-body">
             <p class="product-brand">Brand</p>
             <h5 class="product-name">
-                        <a class="stretched-link" href="/Product">
+                        <a class="stretched-link" href="/product/@Product.Id/">
                     @Product.Title
                 </a>
             </h5>

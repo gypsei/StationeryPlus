@@ -1,87 +1,130 @@
-@page "/product"
+@page "/product/{id:int}/"
+@inject IProductService ProductService
 
+@if (product == null)
+{
+    <span>@message</span>
+}
+else{
 @* Sticky Header Product Page *@
-  <div class="container mt-5 mb-5">
+<div class="container mt-5 mb-5">
     <div class="card">
-      <div class="row g-0">
-        <div class="col-md-6 border-end">
-          <div class="d-flex flex-column justify-content-center">
-            <div class="main_image">
-              @if(Selected != null) 
-              {
-                <img src="@Selected" id="main_product_image" alt="product iamge" width="350">
-              } else 
-              {
-                <img src="https://i.imgur.com/TAzli1U.jpg" id="main_product_image" alt="product image" width="350">
-              }
-            </div>
-            <div class="thumbnail_images">
-              <ul id="thumbnail">
-                @for (var i = 0; i < _list.Count; i++)
-                {
-                  int index = i;
-                  <tr @onclick="()=> ClickedRow(_list[index])" ><td>
-                    <li><img src="@_list[i]" width="70"></li>
-                  </td></tr>
-                }
-              </ul>
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="p-3 right-side">
-            <div class="d-flex justify-content-between align-items-center">
-              <h3>IIlana</h3> <span class="heart btn btn-secondary rounded-circle py-2"><i class='bi bi-balloon-heart'></i></span>
-            </div>
-            <div class="mt-2 pr-3 content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-            </div>
-            <h3>$430.99</h3>
-            <div class="ratings d-flex flex-row align-items-center">
-              <div class="d-flex flex-row">
-                <i class='bi bi-star-fill'></i>
-                <i class='bi bi-star-fill'></i> 
-                <i class='bi bi-star-fill'></i>
-                <i class='bi bi-star-half'></i> 
-                <i class='bi bi-star'></i> 
-              </div>
-              <a href="#" class="text-dark ps-2"><u>441 reviews</u></a>
-            </div>
-            <div class="mt-5">
-              <span class="fw-bold">Colors:</span>
-              <div>
-                <li name="red" class="btn btn-danger p-2"></li>
-                <li name="yellow" class="btn btn-warning p-2 ms-2"></li>
-                <li name="blue" class="btn btn-primary p-2 ms-2"></li>
-                <li name="grey" class="btn btn-secondary p-2 ms-2"></li>
-              </div>
-            </div>
-            <div class="buttons d-flex flex-row mt-5 gap-3">
-               <button class="btn btn-outline-dark">Buy Now</button>
-              <button class="btn btn-dark">Add to Basket</button>
-            </div>
-            <div class="search-option"> 
-              <i class='bi bi-search first-search ps-2'></i>
-              <div class="inputs"> <input type="text" name=""> 
-              </div> <i class='bi bi-share share'></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-@code {
-  string Selected;
+        <div class="row g-0">
+            <div class="col-md-6 border-end">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="main_image">
+                        @if (Selected != null)
+                        {
+                            <img src="@Selected" id="main_product_image" alt="product iamge" width="350">
+                        }
+                        else
+                        {
+                            <img src="@product.ImageURL" id="main_product_image" alt="product image" width="350">
+                        }
+                    </div>
+                    <div class="thumbnail_images">
+                        <ul id="thumbnail">
+                            @for (var i = 0; i < _list.Count; i++)
+                            {
+                                int index = i;
+                                <tr @onclick="()=> ClickedRow(_list[index])">
+                                  <td>
+                                     <li>
+                                         <img src="@_list[i]" width="70">
+                                     </li>
+                                   </td>
+                                </tr>
+                            }
+                        </ul>
 
-  List<string> _list = new List<string>()
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="p-3 right-side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h3>@product.Title</h3> <span class="heart btn btn-secondary rounded-circle py-2"><i class='bi bi-balloon-heart'></i></span>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                        <p>@product.Description</p>
+                    </div>
+                    <h3>Rs @product.Price</h3>
+                    <div class="ratings d-flex flex-row align-items-center">
+                        <div class="d-flex flex-row">
+                            <i class='bi bi-star-fill'></i>
+                            <i class='bi bi-star-fill'></i>
+                            <i class='bi bi-star-fill'></i>
+                            <i class='bi bi-star-half'></i>
+                            <i class='bi bi-star'></i>
+                        </div>
+                        <a href="#" class="text-dark ps-2"><u>441 reviews</u></a>
+                    </div>
+                    <div class="mt-5">
+                        <span class="fw-bold">Colors:</span>
+                        <ul>
+                            <li name="red" class="btn btn-danger p-2"></li>
+                            <li name="yellow" class="btn btn-warning p-2 ms-2"></li>
+                            <li name="blue" class="btn btn-primary p-2 ms-2"></li>
+                            <li name="grey" class="btn btn-secondary p-2 ms-2"></li>
+                        </ul>
+                    </div>
+                    <div class="buttons d-flex flex-row mt-5 gap-3">
+                        <button class="btn btn-outline-dark">Buy Now</button>
+                        <button class="btn btn-dark">Add to Basket</button>
+                    </div>
+                    <div class="search-option">
+                        <i class='bi bi-search first-search ps-2'></i>
+                        <div class="inputs">
+                            <input type="text" name="">
+                        </div> <i class='bi bi-share share'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+} 
+@code {
+
+
+    private Product? product = null;
+    private string message = string.Empty;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+
+        message = "loading products...";
+        var result = await ProductService.GetProduct(Id);
+
+        if(!result.Success){
+            message = result.Message;
+        }
+        else{
+            product = result.Data;
+        }
+
+    }
+
+    
+
+    //code for click and change image
+   string Selected;
+
+    List<string> _list = new List<string>()
   { "https://i.imgur.com/TAzli1U.jpg",
   "https://i.imgur.com/w6kEctd.jpg",
     "https://i.imgur.com/L7hFD8X.jpg",
     "https://i.imgur.com/6ZufmNS.jpg"};
 
-  public void ClickedRow(string s)
-  {
-    Selected =s;
-  }
+    public void ClickedRow(string s)
+    {
+        Selected = s;
+    }
+    //code for click and change image ends
+
+    
+
 }

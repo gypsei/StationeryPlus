@@ -6,6 +6,59 @@ namespace StationeryPlus.Server.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
+        //    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<ProductCategory>().HasData(
+
+        //        new ProductCategory()
+        //        {
+        //            Id = 1,
+        //            Name= "School Supplies",
+        //            Description = "School Supplies for the best variety of school supplies",
+        //            ImageUrl = "",
+        //            Url = "",
+
+        //        },
+
+        //        new ProductCategory()
+        //        {
+        //            Id = 2,
+        //            Name = "Office Supplies",
+        //            Description = "",
+        //            ImageUrl = "",
+        //            Url = "",
+
+        //        },
+
+        //        new ProductCategory()
+        //        {
+        //            Id = 3,
+        //            Name = "Home Supplies",
+        //            Description = "",
+        //            ImageUrl = "",
+        //            Url = "",
+
+        //        },
+        //        new ProductCategory()
+        //        {
+        //            Id = 4,
+        //            Name = "Art Supplies",
+        //            Description = "",
+        //            ImageUrl = "",
+        //            Url = "",
+
+        //        },
+        //        new ProductCategory()
+        //        {
+        //            Id = 5,
+        //            Name = "Gift and Decorations",
+        //            Description = "",
+        //            ImageUrl = "",
+        //            Url = "",
+
+        //        }
+        //        );
+        //}
 
         }
 

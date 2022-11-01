@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace StationeryPlus.Shared;
 
 public class Product
@@ -10,6 +12,12 @@ public class Product
 
     public string? ImageURL { get; set; }
 
-    public int? Price { get; set; }
-    
+
+    [Column(TypeName = "decimal(18,2)")]
+    public decimal Price { get; set; }
+
+    public ProductCategory? Category { get; set; }
+
+    public int CategoryId { get; set; }
+
 }
