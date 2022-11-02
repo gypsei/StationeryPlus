@@ -1,5 +1,7 @@
-@page "/category"
-<PunnyHeadline CategoryTitle="School Supplies" CategorySubtitle="lol lol lol" />
+@page "/{categoryUrl}"
+@inject IProductService ProductService
+
+<PunnyHeadline CategoryTitle="@CategoryUrl" CategorySubtitle="lol lol lol" />
 
 
 <main>
@@ -18,4 +20,14 @@
     
     [Parameter]
     public string? CategorySubtitle { get; set; }
-}
+
+        [Parameter]
+        public string? CategoryUrl { get; set; } = null;
+
+        //new lifecycle method
+
+        protected override async Task OnParametersSetAsync()
+        {
+            await ProductService.GetProducts(CategoryUrl);
+        }
+    }

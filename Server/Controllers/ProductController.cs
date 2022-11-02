@@ -32,5 +32,11 @@ namespace StationeryPlus.Server.Controllers
             return Ok(result);
         }
 
+        [HttpGet("Category/{CategoryUrl}")]
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProductsByCategory(string CategoryUrl)
+        {
+            var result = await _productService.GetProductsByCategory(CategoryUrl);
+            return Ok(result);
+        }
     }
 }

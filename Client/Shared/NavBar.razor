@@ -1,3 +1,4 @@
+@inject ICategoryService CategoryService
 
 <header class="shadow-sm w-100 mb5">
 <!--Main Navigation-->
@@ -128,30 +129,18 @@
                     Home
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <span class="bi bi-house-heart-fill me-2 fs-4"></span>
-                    Dashboard
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <span class="bi bi-house-heart-fill me-2 fs-4"></span>
-                    Orders
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <span class="bi bi-house-heart-fill me-2 fs-4"></span>
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white">
-                    <span class="bi bi-house-heart-fill me-2 fs-4"></span>
-                    Customers
-                  </a>
-                </li>
+                @if (CategoryService.Categories != null)
+               {
+                @foreach (var category in CategoryService.Categories)
+                {
+                  <li>
+                    <a href="@category.Url" class="nav-link text-white">
+                     <span class="bi bi-house-heart-fill me-2 fs-4"></span>
+                        @category.Name
+                    </a>
+                  </li>   
+                }
+               }
               </ul>
             </li>
           </ul>
@@ -177,5 +166,10 @@
 </header>
 
 @code {
-    
+    //lifecycle method oninitalized
+    protected override async Task OnInitializedAsync()
+    {
+        await CategoryService.GetCategories();
+    }
+
 }

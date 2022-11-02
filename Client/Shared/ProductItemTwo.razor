@@ -1,5 +1,9 @@
 ﻿@inject IProductService ProductService
 
+@*unsuscribe*@
+@implements IDisposable
+
+
 @if (ProductService.Products == null && ProductService.Products.Count == 0){
     <span>Loading Products....</span>
 }
@@ -38,8 +42,16 @@ else{
 @code {
     private static List<Product> _Products = new List<Product>();
 
-    protected override async Task OnInitializedAsync(){
-        await ProductService.GetProducts();
+    protected override void OnInitialized(){
+        //await ProductService.GetProducts();
+
+        //subscribe event
+
+        ProductService.ProductsChanged += StateHasChanged;
+    }
+
+    public void Dispose(){
+        ProductService.ProductsChanged -= StateHasChanged;
     }
 
 }

@@ -1,5 +1,6 @@
 global using StationeryPlus.Shared;
 global using StationeryPlus.Server.Services.ProductService;
+global using StationeryPlus.Server.Services.CategoryService;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using StationeryPlus.Server.Data;
@@ -22,6 +23,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
