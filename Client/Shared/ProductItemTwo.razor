@@ -26,8 +26,8 @@ else{
                 </a>
             </h5>
             <div>
-                <span class="selling-price">Rs @Product.Price</span>
-                <span class="original-price">Rs @Product.Price</span>
+                <span class="selling-price">Rs @GetPriceText(Product)</span>
+                  <span class="original-price">Rs @GetPriceText(Product)</span>
             </div>
             <div class="mt-2">
                 <a href="" class="btn btn1">Add To Cart</a>
@@ -53,5 +53,22 @@ else{
     public void Dispose(){
         ProductService.ProductsChanged -= StateHasChanged;
     }
+
+    private string GetPriceText(Product product){
+        var variants = product.Variants;
+
+        if(variants.Count == 0){
+            return string.Empty;
+        }
+
+        else if (variants.Count == 1){
+            return $"{variants[0].Price}";
+        }
+
+        decimal minPrice = variants.Min(v => v.Price);
+
+        return $"Starting at {minPrice}";
+    }
+
 
 }

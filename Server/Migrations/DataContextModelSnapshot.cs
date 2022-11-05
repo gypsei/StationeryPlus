@@ -38,9 +38,6 @@ namespace StationeryPlus.Server.Migrations
                     b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -57,7 +54,6 @@ namespace StationeryPlus.Server.Migrations
                             CategoryId = 1,
                             Description = "HB Pencils, Superior hb bonded, lead resists breakage, Clear and sharp writing",
                             ImageURL = "https://m.media-amazon.com/images/I/71lOR49VkwL._SL1500_.jpg",
-                            Price = 80m,
                             Title = "Nataraj 621 Pencils"
                         },
                         new
@@ -66,7 +62,6 @@ namespace StationeryPlus.Server.Migrations
                             CategoryId = 1,
                             Description = "HB Pencils, Superior hb bonded, lead resists breakage, Clear and sharp writing",
                             ImageURL = "https://m.media-amazon.com/images/I/71lOR49VkwL._SL1500_.jpg",
-                            Price = 80m,
                             Title = "Nataraj 621 Pencils"
                         },
                         new
@@ -75,7 +70,6 @@ namespace StationeryPlus.Server.Migrations
                             CategoryId = 1,
                             Description = "HB Pencils, Superior hb bonded, lead resists breakage, Clear and sharp writing",
                             ImageURL = "https://m.media-amazon.com/images/I/71lOR49VkwL._SL1500_.jpg",
-                            Price = 80m,
                             Title = "Nataraj 621 Pencils"
                         },
                         new
@@ -84,7 +78,6 @@ namespace StationeryPlus.Server.Migrations
                             CategoryId = 2,
                             Description = "HB Pencils, Superior hb bonded, lead resists breakage, Clear and sharp writing",
                             ImageURL = "https://m.media-amazon.com/images/I/71lOR49VkwL._SL1500_.jpg",
-                            Price = 80m,
                             Title = "Nataraj 621 Pencils"
                         });
                 });
@@ -160,6 +153,143 @@ namespace StationeryPlus.Server.Migrations
                         });
                 });
 
+            modelBuilder.Entity("StationeryPlus.Shared.ProductType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Default"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Nataraj"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Doms"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "X1"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Gululu"
+                        });
+                });
+
+            modelBuilder.Entity("StationeryPlus.Shared.ProductVariant", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("OriginalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ProductId", "ProductTypeId");
+
+                    b.HasIndex("ProductTypeId");
+
+                    b.ToTable("ProductVariants");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            ProductTypeId = 1,
+                            OriginalPrice = 89.00m,
+                            Price = 80.46m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 3,
+                            OriginalPrice = 20.12m,
+                            Price = 90.55m
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ProductTypeId = 5,
+                            OriginalPrice = 100.00m,
+                            Price = 50.55m
+                        },
+                        new
+                        {
+                            ProductId = 1,
+                            ProductTypeId = 2,
+                            OriginalPrice = 500m,
+                            Price = 300m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 4,
+                            OriginalPrice = 10.0m,
+                            Price = 5.0m
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            ProductTypeId = 5,
+                            OriginalPrice = 20.0m,
+                            Price = 15.0m
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            ProductTypeId = 4,
+                            OriginalPrice = 50.99m,
+                            Price = 40.99m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 2,
+                            OriginalPrice = 200m,
+                            Price = 100m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 4,
+                            OriginalPrice = 100m,
+                            Price = 50m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 1,
+                            OriginalPrice = 100m,
+                            Price = 100m
+                        });
+                });
+
             modelBuilder.Entity("StationeryPlus.Shared.Product", b =>
                 {
                     b.HasOne("StationeryPlus.Shared.ProductCategory", "Category")
@@ -169,6 +299,30 @@ namespace StationeryPlus.Server.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("StationeryPlus.Shared.ProductVariant", b =>
+                {
+                    b.HasOne("StationeryPlus.Shared.Product", "Product")
+                        .WithMany("Variants")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StationeryPlus.Shared.ProductType", "ProductType")
+                        .WithMany()
+                        .HasForeignKey("ProductTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("ProductType");
+                });
+
+            modelBuilder.Entity("StationeryPlus.Shared.Product", b =>
+                {
+                    b.Navigation("Variants");
                 });
 #pragma warning restore 612, 618
         }

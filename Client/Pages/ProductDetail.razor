@@ -22,6 +22,9 @@ else{
                             <img src="@product.ImageURL" id="main_product_image" alt="product image" width="350">
                         }
                     </div>
+                    
+
+
                     <div class="thumbnail_images">
                         <ul id="thumbnail">
                             @for (var i = 0; i < _list.Count; i++)
@@ -48,7 +51,14 @@ else{
                     <div class="mt-2 pr-3 content">
                         <p>@product.Description</p>
                     </div>
-                    <h3>Rs @product.Price</h3>
+                    @if(GetSelectedVariant() != null){
+                        @if(GetSelectedVariant().OriginalPrice >GetSelectedVariant().Price){
+                                <span><del>Rs @GetSelectedVariant().OriginalPrice</del></span>
+
+                        }
+                            <h3>Rs @GetSelectedVariant().Price</h3>
+
+                    }
                     <div class="ratings d-flex flex-row align-items-center">
                         <div class="d-flex flex-row">
                             <i class='bi bi-star-fill'></i>
@@ -60,6 +70,15 @@ else{
                         <a href="#" class="text-dark ps-2"><u>441 reviews</u></a>
                     </div>
                     <div class="mt-5">
+                            <select class="form-check" @bind="currentTypeId">
+                                @if (product.Variants != null && product.Variants.Count > 1)
+                                {
+                                    @foreach (var variant in product.Variants)
+                                    {
+                                        <option value="@variant.ProductTypeId">@variant.ProductType.Name</option>
+                                    }
+                                }
+                            </select>
                         <span class="fw-bold">Colors:</span>
                         <ul>
                             <li name="red" class="btn btn-danger p-2"></li>
@@ -90,6 +109,10 @@ else{
     private Product? product = null;
     private string message = string.Empty;
 
+    //Our current variant count is 1
+
+    private int currentTypeId = 1;
+
     [Parameter]
     public int Id { get; set; }
 
@@ -104,9 +127,19 @@ else{
         }
         else{
             product = result.Data;
+
+            if(product.Variants.Count>0){
+                currentTypeId = product.Variants[0].ProductTypeId;
+            }
         }
 
+
     }
+        private ProductVariant GetSelectedVariant()
+        {
+            var variant = product.Variants.FirstOrDefault(v => v.ProductTypeId == currentTypeId);
+            return variant;
+        }
 
     
 

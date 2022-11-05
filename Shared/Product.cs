@@ -1,6 +1,10 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace StationeryPlus.Shared;
+
+namespace StationeryPlus.Shared { 
 
 public class Product
 {
@@ -10,13 +14,12 @@ public class Product
 
     public string? Description { get; set; } = String.Empty;
 
-    public string? ImageURL { get; set; }
+    public string? ImageURL { get; set; } = string.Empty;
 
-
-    [Column(TypeName = "decimal(18,2)")]
-    public decimal Price { get; set; }
 
     public ProductCategory? Category { get; set; }
     public int CategoryId { get; set; }
 
+    public List<ProductVariant> Variants { get; set; } = new List<ProductVariant>();
+    }
 }
